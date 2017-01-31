@@ -25,5 +25,5 @@ if (bigNumber !== -Infinity) {
 
 // ----------- Проверка на равенство цены -----------
 var text = 'Вася купил новый телефон за $54,88';
-var parsed = +(text.slice(text.indexOf('$54,88'))).replace('$','').replace(',','.');
+var parsed = parseFloat((text.slice(text.indexOf('$'))).slice(1).replace(',','.'));
 alert(parsed === 54.88);
