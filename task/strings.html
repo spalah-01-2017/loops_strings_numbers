@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var text = 'Вася купил новый телефон за $54,88';
+        text = text.replace(",", ".")
+        var parsed = Number(text.slice(text.indexOf("$") + 1));
+        console.log(parsed === 54.88);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <p class="task">
+
+
+        <!--
+        Напишите программу, работающую в браузере, которая будет в диалоговом окне 
+        просить пользователя ввести число снова и снова до тех пор, 
+        пока пользователь не нажмет отмену. 
+        После этого программа должна вывести на экран максимальное число из тех, 
+        что вводил пользователь. 
+        !!! При реализации этой задачи нельзя использовать массивы. 
+        -->
+    </p>
+    <script>
+        var userNumber = 0,
+            maxNumber = 0;
+        // if (!isNaN(userNumber)) {
+        // } else {
+        //     console.log("It's not a number");
+        // }
+
+        do {
+            userNumber = prompt("Введите число");
+            if (!isNaN(Number(userNumber))) {
+                if (userNumber >= maxNumber) {
+                    maxNumber = userNumber;
+                }
+            }
+        }
+        while (userNumber != null);
+        console.log("максимальное значение - " + maxNumber);
+    </script>
+</body>
+
+</html>
