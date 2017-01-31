@@ -9,8 +9,7 @@
 <body>
     <script>
         var text = 'Вася купил новый телефон за $54,88';
-        text = text.replace(",", ".");
-        var parsed = Number(text.slice(text.indexOf("$") + 1));
+        var parsed = Number(text.slice(text.indexOf("$") + 1).replace(",", "."));
         console.log(parsed === 54.88);
     </script>
 </body>
