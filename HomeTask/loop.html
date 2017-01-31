@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Loop</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		var userNumber;
+		var biggestNumber = -Infinity;
+
+		do {
+			userNumber = prompt('Enter a number!');
+			if (parseFloat(userNumber)) {
+				if (userNumber > biggestNumber) {
+				biggestNumber = +userNumber;
+				}		
+			} else if (userNumber === null) {
+				biggestNumber === -Infinity ? alert('There was no numbers!') 
+				: alert ('Biggest number is: ' + biggestNumber);
+			} else {
+				alert('It\'s not a number! Please, enter a number!');
+				userNumber = ' ';
+			}
+			
+		} while (userNumber);
+
+	</script>
+</body>
+</html>
