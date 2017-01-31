@@ -8,10 +8,22 @@ var b = parseInt(hexColor.slice(5, 7), 16);
 alert('Ваш цвет в rgb: ' + '(' + r + '), ' + '(' + g + '), ' + '(' + b + ')');
 
 // ----------- Максимальное значение вводимых чисел -----------
+var userNumber = -Infinity;
+var bigNumber = userNumber;
 
-
+while (userNumber) {
+	userNumber = parseInt(prompt('Ваше число:'));
+	if (userNumber > bigNumber) {
+		bigNumber = userNumber;
+	}
+}
+if (bigNumber !== -Infinity) {
+	alert('Самое большое число ' + bigNumber);
+} else {
+	alert("Вы не ввели ни одного числа");
+}
 
 // ----------- Проверка на равенство цены -----------
 var text = 'Вася купил новый телефон за $54,88';
-var parsed = +(text.slice(text.indexOf('54,88'))).replace(',','.');
+var parsed = +(text.slice(text.indexOf('$54,88'))).replace('$','').replace(',','.');
 alert(parsed === 54.88);
