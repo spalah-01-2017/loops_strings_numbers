@@ -8,21 +8,22 @@
 
 <body>
     <script>
-        var userNumber = 0,
-            maxNumber = 0;
+        var userNumber = -Infinity,
+            maxNumber = -Infinity;
 
         do {
-            userNumber = prompt("Введите число");
-            if (!isNaN(Number(userNumber))) {
-                if (userNumber >= maxNumber) {
-                    maxNumber = userNumber;
-                    console.log(maxNumber);
-                }
-            }
-        }
+            userNumber = parseInt(prompt("Введите число "));
+            console.log("userNumber: " + userNumber);
+            console.log("typeof:" + typeof(userNumber));
 
-        while (userNumber != null);
-        alert("максимальное значение - " + maxNumber);
+            if (userNumber > maxNumber) {
+                maxNumber = userNumber;
+            }
+            console.log("max: " + maxNumber);
+        }
+        while (!isNaN(userNumber));
+
+        alert("Максимальное число: " + maxNumber);
     </script>
 </body>
 
