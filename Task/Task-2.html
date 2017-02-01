@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TASK</title>
+</head>
+<body>
+	<script>
+		var text = 'Вася купил новый телефон за $54,88';
+		var parsed = parseFloat(text.substring(text.indexOf('$')+1).replace(',', '.'));
+
+		if(parsed === 54.88){
+			alert(parsed);
+		}
+	</script>
+</body>
+</html>
