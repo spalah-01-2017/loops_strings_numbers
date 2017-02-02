@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Exercise 2</title>
+</head>
+<body>
+	<script>
+		
+		var text = 'Вася купил новый телефон за $5444,88 в хорошем магазине';
+
+		var dollarPlace = text.indexOf('$');
+
+		var newString = text.slice(dollarPlace +1);
+
+		var commaPlace = newString.indexOf(',');
+
+		var commaData = newString.charAt(commaPlace);
+
+		var commaReplace = newString.replace(commaData, '.');
+
+		var parse = parseFloat(commaReplace);
+
+		alert(parse);
+
+	</script>
+</body>
+</html>

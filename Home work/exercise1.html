@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Exercise1</title>
+</head>
+<body>
+	<script>
+		var userNumber;
+
+		var maxNumber = -Infinity;
+
+		do {
+			userNumber = +prompt('Введите число', '');
+		  
+		  	while (isNaN(userNumber)) {
+			  	userNumber = prompt('Вы ввели не число, введите число', '');
+			 }
+		  
+			if (userNumber > maxNumber) {
+			  	maxNumber = userNumber;
+			  }
+
+		} while(userNumber);
+
+		alert('Максимальное число ' + maxNumber);
+		
+	</script>
+</body>
+</html>
