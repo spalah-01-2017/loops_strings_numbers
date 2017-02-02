@@ -12,14 +12,19 @@
 
 		do {
 			userNumber = prompt('Enter a number!');
-			if (parseFloat(userNumber)) {
-				if (userNumber > biggestNumber) {
-				biggestNumber = +userNumber;
-				}		
-			} else if (userNumber === null) {
+			if (userNumber === null) {
 				biggestNumber === -Infinity ? alert('There was no numbers!') 
-				: alert ('Biggest number is: ' + biggestNumber);
-			} else {
+				: alert ('Biggest number is: ' + biggestNumber);				
+
+			}  else if (parseFloat(userNumber.replace(',', '.'))) {
+				userNumber = userNumber.replace(',', '.');
+				if (userNumber > biggestNumber) { biggestNumber = +userNumber }				
+
+			}  else if (userNumber.trim() === '') {
+				alert('You must enter something!');
+				userNumber = ' ';
+
+			}  else {
 				alert('It\'s not a number! Please, enter a number!');
 			}
 			
